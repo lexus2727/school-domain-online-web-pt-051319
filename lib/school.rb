@@ -1,6 +1,5 @@
 require 'pry'
 class School
-  attr_reader :name
   
   def initialize(name)
     @name = name
@@ -19,16 +18,16 @@ class School
     @roster[grade] = []
   end
   @roster[grade] << name
-end
+end #closes method
   
  
 def grade(student)
   @roster[student]
 end
 def sort
-  @roster.each do |grade, name|
+  @roster.each do |grade, names|
     #binding.pry
-  @roster[grade] = name.sort
+   names.sort!
 end
 end
 end
